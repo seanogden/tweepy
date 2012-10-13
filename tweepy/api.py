@@ -581,7 +581,7 @@ class API(object):
     list_timeline = bind_api(
         path = '/{owner}/lists/{slug}/statuses.json',
         payload_type = 'status', payload_list = True,
-        allowed_param = ['owner', 'slug', 'since_id', 'max_id', 'per_page', 'page']
+        allowed_param = ['owner', 'slug', 'since_id', 'max_id', 'per_page', 'page','include_entities']
     )
 
     get_list = bind_api(
