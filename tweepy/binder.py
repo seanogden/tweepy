@@ -130,9 +130,9 @@ def bind_api(**config):
                 # Open connection
                 # FIXME: add timeout
                 if self.api.secure:
-                    conn = httplib.HTTPSConnection(self.host)
+                    conn = httplib.HTTPSConnection(host=self.host,source_address=self.api.source_address)
                 else:
-                    conn = httplib.HTTPConnection(self.host)
+                    conn = httplib.HTTPConnection(host=self.host,source_address=self.api.source_address)
 
                 # Apply authentication
                 if self.api.auth:
